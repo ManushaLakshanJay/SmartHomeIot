@@ -60,6 +60,10 @@ const DeviceTab = ({ icon, title, description, features, color, image }: DeviceT
           src={image}
           alt={title} 
           className="relative rounded-3xl shadow-lg border border-white/20 w-full h-auto object-cover aspect-video"
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = 'https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
+          }}
         />
       </motion.div>
     </div>
@@ -81,7 +85,7 @@ const DevicesDemoSection = () => {
         "Customizable color temperatures"
       ],
       color: "bg-gradient-to-r from-[#0F4C81] to-[#4F46E5]",
-      image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1550434828-c6e2a08f8e7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       value: "thermostat",
@@ -96,7 +100,7 @@ const DevicesDemoSection = () => {
         "Up to 30% reduction in energy costs"
       ],
       color: "bg-gradient-to-r from-[#2E7D32] to-[#4CAF50]",
-      image: "https://images.unsplash.com/photo-1584545284372-f22510eb7c7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       value: "security",
@@ -111,7 +115,7 @@ const DevicesDemoSection = () => {
         "Integration with security cameras"
       ],
       color: "bg-gradient-to-r from-[#D946EF] to-[#EC4899]",
-      image: "https://images.unsplash.com/photo-1558002038-1055959bc28d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       value: "cameras",
@@ -126,7 +130,7 @@ const DevicesDemoSection = () => {
         "Secure cloud and local storage options"
       ],
       color: "bg-gradient-to-r from-[#F59E0B] to-[#EF4444]",
-      image: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1580982327559-c1202864eb05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
 

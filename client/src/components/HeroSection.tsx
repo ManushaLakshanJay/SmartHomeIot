@@ -59,7 +59,11 @@ const HeroSection = () => {
               <img 
                 src="https://images.unsplash.com/photo-1558002038-1055959bc28d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                 alt="Smart home system interface" 
-                className="relative rounded-2xl shadow-2xl w-full h-auto border border-white/20"
+                className="relative rounded-2xl shadow-2xl w-full h-auto border border-white/20 object-cover"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80';
+                }}
               />
               <div className="absolute -bottom-4 -right-4 p-4 bg-white rounded-xl shadow-lg z-10">
                 <div className="flex items-center space-x-2">

@@ -72,9 +72,13 @@ const ShowcaseSection = () => {
           <div className="relative max-w-4xl">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#0F4C81] to-[#2E7D32] rounded-2xl blur-md opacity-20"></div>
             <img 
-              src="https://images.unsplash.com/photo-1558002038-1055959bc28d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
+              src="https://images.unsplash.com/photo-1585670210693-e7fdd16b142d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
               alt="Smart home device mockups" 
-              className="relative rounded-2xl shadow-lg max-w-full h-auto border border-white/20"
+              className="relative rounded-2xl shadow-lg max-w-full h-auto border border-white/20 object-cover"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = 'https://images.unsplash.com/photo-1557438159-51eae449f0c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80';
+              }}
             />
             
             {/* Status indicator */}
