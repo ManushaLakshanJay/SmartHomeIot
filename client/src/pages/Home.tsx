@@ -9,6 +9,8 @@ import StatisticsSection from '@/components/StatisticsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import PartnerSection from '@/components/PartnerSection';
 import FAQSection from '@/components/FAQSection';
+import DevicesDemoSection from '@/components/DevicesDemoSection';
+import ThemeToggle from '@/components/ThemeToggle';
 import { ArrowUp } from 'lucide-react';
 
 // Scroll to top button component
@@ -84,6 +86,7 @@ const Home = () => {
         <FeaturesSection />
         <StatisticsSection />
         <ShowcaseSection />
+        <DevicesDemoSection />
         <TestimonialsSection />
         <PartnerSection />
         <FAQSection />
@@ -91,6 +94,7 @@ const Home = () => {
       </main>
       <Footer />
       <ScrollToTopButton />
+      <ThemeToggle />
     </div>
   );
 };
